@@ -128,3 +128,7 @@ function sumarray(array){
     return Final;
  }
 console.log(sumarray([2,33,13,8,0,4]));
+
+function sumMax () {
+    
+}
