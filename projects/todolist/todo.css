@@ -1,11 +1,15 @@
-@charset = "utf-8";
-
+@charset "utf-8";
+/*Colors the background a fabulous p!nk*/
 body {
-    background-color: rgb(255, 219, 241);
+    background-color: #ffdbf1;
 }
 
 * {
     box-sizing: border-box;
+}
+/*makes everything show up in an orderly fashion instead of all jumbled together.*/
+.typing {
+    display: flex;
 }
 
 
@@ -16,27 +20,21 @@ ul {
 
 
 ul li {
-    cursor: pointer;
+    cursor: pointer;/*Makes the cursor look all hand-like and stuff*/
     position: relative;
     padding: 12px 8px 12px 40px;
     background: #eee;
     font-size: 18px;
     transition: 0.2s;
+    border-top: solid #ffdbf1;
 
-
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 
-ul li:nth-child(odd) {
-    background: #f9f9f9;
-}
 
 
-ul li:hover {
+
+ul li:hover {/*What happens in hover stays in hover(it only affects the element when you hover over it)*/
     background: #ddd;
 }
 
@@ -77,10 +75,10 @@ ul li.done::before {
 
 
 .header {
-    background-color: #ff75c1;
-    padding: 30px 40px;
+    background-color: #ff75c1;/*Changes color*/
+    padding: 50px 50px;/*Adds some good ol' padding to protect our header*/
     color: white;
-    text-align: center;
+    text-align: center;/*Makes the text show up in the center of the square, it look unprofessional otherwise*/
 }
 
 .header:after {
@@ -90,9 +88,9 @@ ul li.done::before {
 }
 
 input {
-    margin: 0;
+    margin-right: 10px;
     border: none;
-    border-radius: 0;
+    border-radius: 100px;
     width: 75%;
     padding: 10px;
     float: left;
@@ -107,9 +105,9 @@ input {
     float: left;
     text-align: center;
     font-size: 16px;
-    cursor: pointer;
+    cursor: pointer;/*Makes the cursor look like a hand again because thats cool and looks a button*/
     transition: 0.3s;
-    border-radius: 0;
+    border-radius: 100px;;
 }
 
 .addBtn:hover {

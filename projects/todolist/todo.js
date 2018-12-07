@@ -1,3 +1,4 @@
+//Makes the button spawn and stick to all of the elements
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -8,7 +9,7 @@ for (i = 0; i < myNodelist.length; i++) {
   myNodelist[i].appendChild(span);
 }
 
-
+//Makes the element invisible
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
@@ -26,14 +27,14 @@ list.addEventListener('click', function(ev) {
   }
 }, false);
 
-
-function newElement() {
+//Creates a new element
+function newElement() {//a function called newelement... it make a new element.
   var li = document.createElement("li");
   var inputValue = document.getElementById("nySak").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("You must write something!");
+    alert("Type in a frickin' ting to do!");
   } else {
     document.getElementById("ultimateUL").appendChild(li);
   }
