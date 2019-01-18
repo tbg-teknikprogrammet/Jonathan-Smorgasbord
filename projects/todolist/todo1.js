@@ -1,7 +1,7 @@
 var todos = [];
 
 var btnActivate = document.getElementById("activate");
-btnActivate.addEventListener {"click", function() {
+btnActivate.addEventListener ("click", function() {
   var input = prompt("what to do?");
   while(input !== "quit" || input !=="Quit") {
     if(input === "new") {

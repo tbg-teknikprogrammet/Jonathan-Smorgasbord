@@ -1,87 +1,109 @@
-// Model asingel person
+// var person = ["Adam Arthur Alexis Jonsson", 18, "unknown"];
+// console.log(person[2]);
 
-var person = ["Hellboi", 31, "Piteå"];
+// var person2 = [99, "skellefteå", "Lindh0lm"]
+// console.log(person2[1]);
 
-// Retrive data
-
-// hometown
-console.log(person[2]);
-
-// Reverse order of data.
-var person2 = [999, "Lycksele", "William"];
-
-// hometown
-console.log(person2[2]);
-
-// To model a person is the perfect use case for an objekt
-var person = {
-    name: "ADAM", //key:value pair
-    age: 18,
-    hometown: "Adams hem"
-};
-
-// Note: No index 
-
-console.log(person.name);
-
-person.age += 1;
-
-// Different methods of initializing objects
-var oddNums = {};
-oddNums.int = 1;
-oddNums.str = "one";
-oddNums.isOdd = true;
-
-//All lat ones
-var dog = {
-    name: "Doggo",
-    breed: "Chihuahua",
-    age: "3,141592653",
-}
-
-var cat = new Object();
-cat.name = "Svenne";
+// var person = {
+//     name: "Riccard", // key value pair
+//     age: 18,
+//     hometown: "Dorotea"
+// };
 
 
-var junkObject = {
-    name: "Junk",
-    age: 33,
-    friends: ["Saruman", "Zelda"],
-    pet: {
-        name: "Leg",
-        age: 69,
-    }
-}
+// retrive data from object
+// console.log("The cool boi is", person.name);
 
-console.log(junkObject.pet.name);
-console.log(junkObject.friends[1]);
+// console.log("He was just a peasant at the age of", person.age);
+// person.age += 1;
+// console.log("But was worshipped like a god when he turned", person.age);
 
-var posts = [{author: "Isak", title: "Leg", comments: ["Wow!", "Dab"]}, 
-{author: "Jonis", title: "Spel", comments: ["1337!"]}];
+// console.log("So he decided to move from", person.hometown);
+// person.hometown = "Hell";
+// console.log("To", person.hometown);
 
-console.log(posts[1].comments[0])
+// make an empty object and assign key/value pairs to is
+// var oddNums = {};
+// oddNums.int = 1;
+// oddNums.str = "one";
+// oddNums.isOdd = true;
 
-for(var i = 0; i < posts.length; i++) {
-    console.log(posts[i].title, posts[i].author, posts[i].comments)
-}
+// all at once
 
-// Move DB
+// var dragon = {
+//     name: "Paarthunax",
+//     breed:"Horntailed Fangboi",
+//     age: 9999,
+//     isFriendly: true
+//     isWiseBoi: true
+// };
 
+// var santasSleigh = new Object();
+// santasSleigh.name = "Snabb-sate";
+// santasSleigh.breed = "Norwegian Oak";
+// santasSleigh.age = 9999999;
+// santasSleigh.canFly = true;
+
+// objects can hold all sort of data
+// var junkObject = {
+//     name:  "Me :(",
+//     age:  18,
+//     color: "Black as my Soul",
+//     isSad: true,
+//     friends: ["no one", "myself?", "none"],
+//     pet: {
+//         name: "Ackemo",
+//         species: "Dead fish",
+//         age: 3
+//     }
+// }
+
+// console.log(junkObject.pet.species);
+// console.log(junkObject.friends[2]);
+// console.log(junkObject.isSad);
+
+// var posts = [
+//     {
+//         name: "Jonathan Arnfjell",
+//         title: "Adulting is Hard",
+//         comments: ["Good book, read"]
+//     }, 
+//     {
+//         name: "Stephen Hawking",
+//         title: "My weelchair is PIMPED XD",
+//         comments: ["A wild look into the brightest mind..."]
+//     }
+// ];
+
+// console.log(posts[1].comments[1]);
+// for(var i = 0; i < posts.length; i++) {
+//     console.log(posts[i].title, posts[i].name, posts[i].comments)
+// }
+
+// ********************************Uppgift*************************************
 var movies = [
     {
         title: "La La Land",
-        rating: "9.5/10",
-        watched: "Yes",
+        rank: "9/10 stars",
+        seen: true
     },
     {
-        title: "Titanic",
-        rating: "8/10",
-        watched: "Yes",
+        title: "Avengers: Infinity war",
+        rank: "7/10 stars",
+        seen: true
     },
     {
-        title: "The Room",
-        rating: "0.3",
-        watched: "Yes",
+        title: "Pleasantville",
+        rank: "7,5/10 stars",
+        seen: false
     }
-];
+]
 
+movies.forEach(function(movie) {
+    if (movie.seen == true) {
+    console.log("The title is " + movie.title + ", it has a rating of " + movie.rank +" and you have seen it")
+    }
+    else{
+        console.log("The title is " + movie.title + ", it has a rating of " + movie.rank +" and you have not seen it")
+    }
+});

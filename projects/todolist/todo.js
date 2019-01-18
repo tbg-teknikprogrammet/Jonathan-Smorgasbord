@@ -1,40 +1,36 @@
-var todos = [];
+document.getElementsByTagName("button")[0].addEventListener("click", List)
 
-var btnActivate = document.getElementById("activate");
-btnActivate.addEventListener("click", function() 
-{
-  var input = prompt("what to do?");
-  while(input !== "exit" || input !=="Exit") 
-  {
-    if(input === "new") 
-    
-    {
-      var newTodo = prompt ("what to add?");
-      todos.push(newTodo);
-      console.log(newTodo + "was added to list");
-    }
-   
-    else if(input === "list") 
-   
-    {
-        todos.forEach(function(todo, i) 
-       
-        {
-            console.log("on index: " + i + ":" + todo);
-        });
-    }
-   
-    else if(input === "delete") 
-   {
-        var index = prompt("What to delet?");
-        todos.splice(index, 1);
-        console.log("you killed number: " + index);
+var ToDoList = []
 
-    }
-   
-    if(input === "exit" || input === "Exit" ) 
-   
-    {
-      console.log("Ok, you leave");
-    }
-  }
+function List() {
+
+        var todo = 0;
+     
+        while(todo !== "exit" || todo !== "Exit") { // Do while the q button is not pressed
+
+            todo = prompt("Vad vill du göra?");
+
+            if(todo === "list" || todo === "List") {
+                console.log(ToDoList)
+               
+             }  
+             
+             else if(todo === "new" || todo === "New") {
+                 var addNew = prompt("Write something to add to the list")
+                 ToDoList.push(addNew); // Add thing to the array
+                 console.log("You added " + addNew + " to the list!")
+             }
+             
+             else if(todo === "delete" || todo === "Delete") {
+                    var removeIt = Number(prompt("Write a number to remove from the list"))
+                 
+                    ToDoList.splice(removeIt, 1) // Remove a chosen item from the list
+                    console.log(ToDoList)
+                 }
+                   
+             else if(todo === "exit" || todo === "Exit") // Stops the loop, basically cancel the action if you for example pressed "n"
+                break;
+        }
+        if(todo === "exit" || todo === "Exit") // Quit the prompt
+            console.log("Closing...")
+}
