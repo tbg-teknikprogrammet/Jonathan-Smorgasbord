@@ -84,26 +84,26 @@
 var movies = [
     {
         title: "La La Land",
-        rank: "9/10 stars",
+        rank: "9/10",
         seen: true
     },
     {
         title: "Avengers: Infinity war",
-        rank: "7/10 stars",
+        rank: "7/10",
         seen: true
     },
     {
         title: "Pleasantville",
-        rank: "7,5/10 stars",
+        rank: "7,5/10",
         seen: false
     }
 ]
 
 movies.forEach(function(movie) {
     if (movie.seen == true) {
-    console.log("The title is " + movie.title + ", it has a rating of " + movie.rank +" and you have seen it")
+    console.log("Title: " + movie.title + ", it has a rating of " + movie.rank +" and you have seen it")
     }
     else{
-        console.log("The title is " + movie.title + ", it has a rating of " + movie.rank +" and you have not seen it")
+        console.log("Title: " + movie.title + ", it has a rating of " + movie.rank +" and you have not seen it")
     }
 });
