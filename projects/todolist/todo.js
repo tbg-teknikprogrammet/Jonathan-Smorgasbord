@@ -1,36 +1,39 @@
 document.getElementsByTagName("button")[0].addEventListener("click", List)
 
-var ToDoList = []
+var myEpicList = []
 
 function List() {
 
-        var todo = 0;
+        var input = 0;
      
-        while(todo !== "exit" || todo !== "Exit") { // Do while the q button is not pressed
+        while(input !== "exit" || input !== "Exit") { // Do while the q button is not pressed
 
-            todo = prompt("Vad vill du göra?");
-
-            if(todo === "list" || todo === "List") {
-                console.log(ToDoList)
+            input = prompt("Vad vill du göra?");
+            if(input === "new" || input === "New") {
+                 var addNew = prompt("Write something to add to the list")
+                 myEpicList.push(addNew); // Add thing to the array
+                 console.log("You added " + addNew + " to the list!")
+                        }
+            
+            
+             else if(input === "list" || input === "List") {
+                for(var i = 0; i <= myEpicList.length-1; i++) 
+                {
+                    console.log(myEpicList[i])
+                }
                
              }  
              
-             else if(todo === "new" || todo === "New") {
-                 var addNew = prompt("Write something to add to the list")
-                 ToDoList.push(addNew); // Add thing to the array
-                 console.log("You added " + addNew + " to the list!")
-             }
-             
-             else if(todo === "delete" || todo === "Delete") {
-                    var removeIt = Number(prompt("Write a number to remove from the list"))
+             else if(input === "delete" || input === "Delete") {
+                    var indxDel = Number(prompt("Write a number to remove from the list"))
                  
-                    ToDoList.splice(removeIt, 1) // Remove a chosen item from the list
-                    console.log(ToDoList)
+                    myEpicList.splice(indxDel, 1) // Remove a chosen item from the list
+                    console.log("you deleted index: " + indxDel)
                  }
                    
-             else if(todo === "exit" || todo === "Exit") // Stops the loop, basically cancel the action if you for example pressed "n"
+             else if(input === "exit" || input === "Exit") // Stops the loop, basically cancel the action if you for example pressed "n"
                 break;
         }
-        if(todo === "exit" || todo === "Exit") // Quit the prompt
+        if(input === "exit" || input === "Exit") // Quit the prompt
             console.log("Closing...")
 }
