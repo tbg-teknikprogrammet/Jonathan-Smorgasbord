@@ -26,27 +26,27 @@ var secretNumber = 2;
 
 var userInput = prompt("Gissa ett nummer mellan 1-10");
 while (userInput != secretNumber) {
-    var userInput = prompt("Gissa igen!")
-    if (userInput == secretNumber) {
-        document.writeln("Du gissade rätt!");
+
+    if (userInput > 0 && userInput < 4) {
+        
+        userInput = prompt("Väldigt nära, Gissa igen!!!");
+    }
+    else if (userInput > secretNumber) {
+        userInput = prompt("För högt, Gissa igen!!!");
+    }
+    else if (userInput < secretNumber) {
+        userInput = prompt("För lågt, Gissa igen!!!");
     }
 }
+if (userInput == secretNumber) {
+    document.writeln("Rätt!")
+}
 
-/*
-if (userInput > 5 && userInput < 9) {
-    document.writeln("Väldigt nära...");
-    userInput = prompt("Gissa igen!!!");
-}
-else if (userInput > secretNumber) {
-    document.writeln("För högt");
-}
-else {
-    document.writeln(För lågt")
-}
-*/
-/*var age = Number(prompt("Din ålder: "))
-if(age < 0) {
-    // Du är inte född ännu
-    document.writeln("This makes no sense!");
-}
-*/
+
+
+
+// var age = Number(prompt("Din ålder: "))
+// if(age < 0) {
+//     // Du är inte född ännu
+//     document.writeln("This makes no sense!");
+// }

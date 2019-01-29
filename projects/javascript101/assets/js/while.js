@@ -9,34 +9,34 @@ while (i < 20) {
 }
 
 /*Övning 2*/
-var text = "";
-var i = 10;
-while (i <= 40) {
-    text += "Numret är: " + i + "<br>";
-    i+= 2;
-}
+// var text = "";
+// var i = 10;
+// while (i <= 40) {
+//     text += "Numret är: " + i + "<br>";
+//     i+= 2;
+// }
 
 /*Övning 3*/
-var text = "";
-var i = 300;
-while (i <= 333) {
-    text += "Numret är: " + i + "<br>";
-    i++;
-    if (i % 2 == 0){
-        i++;
-    }
-}
+// var text = "";
+// var i = 300;
+// while (i <= 333) {
+//     text += "Numret är: " + i + "<br>";
+//     i++;
+//     if (i % 2 == 0){
+//         i++;
+//     }
+// }
 
 /*Övning 4*/
 
-var text = "";
-var i = 5;
-while (i <= 50) {
-    i++;
-    if (i % 3 == 0 && i % 5 == 0){
-        text += "Numret är: " + i + "<br>";
-    }
-}
+// var text = "";
+// var i = 5;
+// while (i <= 50) {
+//     i++;
+//     if (i % 3 == 0 && i % 5 == 0){
+//         text += "Numret är: " + i + "<br>";
+//     }
+// }
 
 document.getElementById("output").innerHTML = text;
 
