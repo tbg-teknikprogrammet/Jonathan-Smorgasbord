@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+body {
+    background: rgb(68, 53, 13);
+    color: rgb(255, 255, 255);
+    padding: 20px 0px 0px 20px;
+}
+
+.some-class {
+    color: red;
+    letter-spacing: 2px;
+    transform: rotate(180deg);
+}
+
+.plusOne {
+    color:Blue;
+}
+
+.toggle {
+    background-color:purple;
+}
