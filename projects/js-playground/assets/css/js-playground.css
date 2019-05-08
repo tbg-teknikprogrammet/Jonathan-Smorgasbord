@@ -1,0 +1,28 @@
+@charset 'utf-8';
+.back {
+    background-color: aliceblue;
+}
+.alt-back
+
+.imagery {
+    display: flex;
+    justify-content: center;
+}
+
+.imagery section {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+}
+ 
+img {
+    width: 30%;
+    height: 30%;
+}
+
+.toggle {
+    background-color: black;
+}
+
