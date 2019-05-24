@@ -5,21 +5,47 @@
     <title>Page Title</title>
     <link rel="stylesheet" href="assets/css/js-playground.css">
 </head>
-<body class="back">
+<body>
     <nav class="imagery">
         <section>
-                <img src="assets/img/astronaut.jpg" class ="img1">
-                <img src="assets/img/coolface.jpg" class ="img2">
-                <img src="assets/img/desolation.jpg" class ="img3">
-                <img src="assets/img/draegon.png" class ="img4">
-                <img src="assets/img/forrestgump.jpg" class ="img5">
-                <img src="assets/img/japanese.jpg" class ="img6">
-                <img src="assets/img/rain.jpg" class ="img7">
-                <img src="assets/img/redforrest.jpg" class ="img8">
-                <img src="assets/img/space.jpg" class ="img9">
+            <nav class="sqr1 sqr">
+                <img src="assets/img/astronaut.jpg" class="img1">
+            </nav>
+            <nav class="sqr2 sqr">
+                    <h1><span class="plaier1">0</span> to <span class="plaier2">0</span></h1>
+                    <ul>Playing to: <span class="goal">1</span></ul>
+                    <input type="number" min="1" max="10">
+                    <button class="btnPlayer1">player 1</button>
+                    <button class="btnPlayer2">player 2</button>
+                    <button class="btnReset" onClick="document.location.reload(true)">reset</button>
+                    <h1></h1>
+            </nav>
+            <nav class="sqr3 sqr">
+                <button class="lefty" onclick="plusDivs(-1)">&#10094;</button>
+                <img class="pics" src="assets/img/draegon.png">
+                <img class="pics" src="assets/img/coolface.jpg">
+                <img class="pics" src="assets/img/desolation.jpg">
+                <img class="pics" src="assets/img/forrestgump.jpg">
+                <img class="pics" src="assets/img/giphy.gif">
+
+                <button class="righty" onclick="plusDivs(1)">&#10095;</button>    
+            </nav>
+            <nav class="sqr4 sqr">
+                <h1 class="bigcalc">Multiply two numbers</h1>
+                <input class="inp1">
+                <input class="inp2">
+                <button class="calcbtn">Multiply!</button>
+            </nav>
+            <nav class="sqr5 sqr" id="sec5">
+                <button class="spin">SPIN</button>
+            </nav>
+            <nav class="sqr6 sqr"></nav>
+            <nav class="sqr7 sqr"></nav>
+            <nav class="sqr8 sqr"></nav>
+            <nav class="sqr9 sqr"></nav>                   
         </section>
 
-    </nav>
+    </nav> 
 <script src="assets/js/js-playground.js"></script>    
 </body>
 
