@@ -100,5 +100,19 @@ var slideIndex = 1;
 calcbtn.addEventListener("click", function() {
 bigcalc.innerHTML = "It iquals to " + inp1.value * inp2.value;
 
-})
+});
+
+document.getElementsByClassName("openL")[0].addEventListener("click", function() {
+	document.getElementById("lightbox").className = "open";
+});
+
+document.getElementById("close").addEventListener("click", function() {
+	document.getElementById("lightbox").className = "";
+});
+
+document.getElementById("lightbox").addEventListener("click", function(e) {
+	if (e.target.id == "lightbox") {
+		document.getElementById("lightbox").className = "";
+	}
+});
 
